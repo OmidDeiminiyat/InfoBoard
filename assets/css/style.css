@@ -1,0 +1,223 @@
+
+:root {
+    --main-color: #F5D45B;
+    --First-back: #564A1F;
+    --texts: white;
+    --Red: red;
+    --blue: blue;
+    --orange: orange;
+    --dark: black;
+    --paragraf: rgb(215, 211, 211);
+    --lightBlack: rgba(0, 0, 0, 0.332);
+}
+
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    background-color: var(--main-color);
+}
+.main section:nth-child(1) {
+    background-color:  var(--First-back);
+    margin: 1rem;
+    border-radius: 15px;
+    padding: 0 5% 0 5%;
+}
+.main section:nth-child(1) h1{
+    color: var(--texts);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 33px;
+    text-align: center;
+
+    /*  font-family: Underground */
+}
+.main section:nth-child(1) h3 {
+    color: var(--texts);
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 20px;
+    text-align: center;
+
+}
+.main section:nth-child(1) div {
+    display: flex;
+    flex-direction: column;
+   
+}
+.main section:nth-child(1) fieldset {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: var(--texts);
+  margin: 6px 0 0 0;
+    border-radius: 20px;
+    padding: 0;
+}
+.main section:nth-child(1) fieldset p {
+   
+    margin: 18px 30px 0 0;
+
+}
+.main section:nth-child(1) fieldset p:nth-child(1) {
+    background-color: var(--main-color);
+    padding: 1rem;
+    margin: 0 20px 0 0;
+    border-radius: 20px;
+}
+
+.main section:nth-child(1) .listGroup ul{
+    display: flex;
+    flex-direction: row;
+    margin-left: 80px;
+}
+.main section:nth-child(1) .listGroup ul li {
+justify-content: center;
+list-style: none;
+margin: 3px;
+padding: 3px;
+}
+.main section:nth-child(1) .listGroup ul li:nth-child(1) {
+    background-color: var(--Red);
+    color: var(--texts);
+    border-radius: 12px;
+}
+.main section:nth-child(1) .listGroup ul li:nth-child(2) {
+    background-color: var(--main-color);
+    border-radius: 12px;
+}
+.main section:nth-child(1) .listGroup ul li:nth-child(3) {
+    background-color: var(--blue);
+    border-radius: 12px;
+    color: var(--texts);
+}
+.main section:nth-child(1) .listGroup ul li:nth-child(4) {
+    background-color: var(--orange);
+    border-radius: 12px;
+
+}
+.main section:nth-child(1) .WifiInfo {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+margin: 0 0 1rem 0;
+}
+
+.WifiInfo article {
+    background-color: var(--texts);
+    border-radius: 20px;
+    
+    width: 100%;
+}
+
+/* second section start */
+
+.main section:nth-child(2) #Time {
+    background-color: var(--texts);
+    color: var(--texts);
+    width: 25%;
+    border-radius: 10px;
+    margin: 0;
+    border: 1px solid black;
+    margin-left: 30%;
+    margin-top: 1rem;
+}
+.main section:nth-child(2) #Time hgroup {
+    display: flex;
+    flex-direction: row;
+    gap: 0.05rem;
+    margin: 0;
+}
+.main section:nth-child(2) #Time hgroup h3 {
+    background-color: var(--dark);
+    padding: 15px;
+    border-radius: 20px;
+    margin: 0;
+    font-size: 35px;
+}
+
+/* Seconnd part */
+
+.main section:nth-child(2) div:nth-child(2) {
+    background-color: var(--First-back);
+    border-radius: 20px;
+    color: var(--texts);
+    padding: 20px 20px 20px 20px;
+    margin-top: 1rem;
+}
+.main section:nth-child(2) div:nth-child(2) h3 {
+    text-align: center;
+}
+.main section:nth-child(2) div:nth-child(2) p, .main section:nth-child(2) div:nth-child(3) figure p {
+color: var(--paragraf);
+}
+
+/* Third part */
+.main section:nth-child(2) div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    text-align: center;
+}
+.main section:nth-child(2) div:nth-child(3) figure {
+    background-color: var(--First-back);
+    border-radius: 20px;
+    color: var(--texts);
+}
+
+
+/* Start third section */
+.main section:nth-child(3) {
+    background-image: url("../image/pexels-andras-stefuca-18004083.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.main section:nth-child(3) h1 {
+    text-align: center;
+}
+
+.main section:nth-child(3) h1 span:nth-child(1) {
+    color: var(--texts);
+    font-weight: 600;
+    font-size: 42px;
+    
+} 
+.main section:nth-child(3) h1 span:nth-child(2) {
+    color: var(--texts);
+    font-weight: 100;
+    font-size: 42px;
+} 
+.main section:nth-child(3) div {
+    width: 60%;
+    position: relative;
+    left: 20%;
+    margin-top: 20%;
+    padding: 0;
+}
+.main section:nth-child(3) div fieldset {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: var(--lightBlack);
+    border-radius: 20px;
+    margin-top: 6px;
+    border: none;
+    padding: 0;
+}
+.main section:nth-child(3) div fieldset p {
+    padding: 12px;
+    margin: 0;
+
+}
+.main section:nth-child(3) div fieldset p:nth-child(1) {
+    background-color: var(--main-color);
+   
+  
+}
+
+
+
+
