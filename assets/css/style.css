@@ -219,5 +219,8 @@ color: var(--paragraf);
 }
 
 
-
+figure img{
+    display: block;
+    width: 100%;
+}
 
