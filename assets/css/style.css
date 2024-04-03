@@ -47,24 +47,37 @@
    
 }
 .main section:nth-child(1) fieldset {
-    display: flex;
-    flex-direction: row;
     text-align: center;
-    background-color: var(--texts);
-  margin: 6px 0 0 0;
-    border-radius: 20px;
+    margin: 6px 0 0 0;
     padding: 0;
+    border: none;
+
 }
+
+.main section:nth-child(1) fieldset .NewStyle {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 10px;
+    background-color: var(--texts);
+    border-radius: 20px;
+}
+
 .main section:nth-child(1) fieldset p {
-   
     margin: 18px 30px 0 0;
+    text-transform: uppercase;
+    font-size: 10px;
+
 
 }
 .main section:nth-child(1) fieldset p:nth-child(1) {
-    background-color: var(--main-color);
+    /* background-color: var(--main-color); */
     padding: 1rem;
     margin: 0 20px 0 0;
     border-radius: 20px;
+}
+.main section:nth-child(1) fieldset p:nth-child(4) {
+   
+    font-weight: 600;
 }
 
 .main section:nth-child(1) .listGroup ul{
@@ -97,6 +110,11 @@ padding: 3px;
     border-radius: 12px;
 
 }
+
+
+
+
+
 .main section:nth-child(1) .WifiInfo {
 display: grid;
 grid-template-columns: 1fr 1fr;
@@ -215,9 +233,27 @@ color: var(--paragraf);
 .main section:nth-child(3) div fieldset p:nth-child(1) {
     background-color: var(--main-color);
    
-  
 }
 
 
+.main section:nth-child(3) hgroup h1{
+    position: absolute;
+    top: 70%;
+    font-weight: 100;
+    font-size: 60px;
+    color: var(--main-color);
+}
 
+.Red {
+    background-color: red;
+}
 
+.Yellow {
+    background-color: yellow;
+}
+.Blue {
+    background-color: blue;
+}
+.Orange {
+    background-color: orange;
+}
