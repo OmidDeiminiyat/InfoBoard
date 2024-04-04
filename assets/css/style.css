@@ -209,17 +209,16 @@ color: var(--paragraf);
     font-size: 42px;
 } 
 .main section:nth-child(3) div {
-    width: 60%;
+    width: 82%;
     position: relative;
-    left: 20%;
+    left: 9%;
     margin-top: 20%;
     padding: 0;
 }
 .main section:nth-child(3) div fieldset {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
-    background-color: var(--lightBlack);
     border-radius: 20px;
     margin-top: 6px;
     border: none;
@@ -230,9 +229,21 @@ color: var(--paragraf);
     margin: 0;
 
 }
-.main section:nth-child(3) div fieldset p:nth-child(1) {
-    background-color: var(--main-color);
-   
+
+.main section:nth-child(3) div fieldset .ThirdStyle {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    background-color: var(--lightBlack);
+    border-radius: 20px;
+
+}
+.main section:nth-child(3) div fieldset .ThirdStyle p:nth-child(1) {
+    border-radius: 20px;
+}
+.main section:nth-child(3) div fieldset .ThirdStyle p {
+    font-size: 10px;
 }
 
 
@@ -244,8 +255,22 @@ color: var(--paragraf);
     color: var(--main-color);
 }
 
+
+.main section:nth-child(3) .NewDato {
+    position: absolute;
+    top: 70%;
+    font-weight: 100;
+    font-size: 60px;
+    color: red;
+}
 .Red {
     background-color: red;
+}
+
+figure img{
+    display: block;
+    width: 100%;
+
 }
 
 .Yellow {
