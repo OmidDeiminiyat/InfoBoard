@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
     --main-color: #F5D45B;
@@ -17,6 +18,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     background-color: var(--main-color);
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+   
 }
 .main section:nth-child(1) {
     background-color:  var(--First-back);
@@ -256,13 +260,41 @@ color: var(--paragraf);
     font-size: 10px;
 }
 
-
-.main section:nth-child(3) hgroup h1{
-    position: absolute;
-    top: 70%;
-    font-weight: 100;
-    font-size: 60px;
+.main section:nth-child(3) hgroup  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     color: var(--main-color);
+    margin: 0;
+    padding: 0;
+}
+.main section:nth-child(3) hgroup div:nth-child(2){
+    font-weight: 400;
+    font-size: 90px;
+    position: relative;
+    top: 140px;
+}
+
+
+.main section:nth-child(3) hgroup div:nth-child(1) {
+    font-weight: 100;
+    font-size: 30px;
+}
+
+.main section:nth-child(3) hgroup div:nth-child(1) h1{
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 70px;
+}
+
+.main section:nth-child(3) hgroup div:nth-child(2) img {
+    fill: blue;
+    width: 60%;
+    left: 100px;
+    top: 10px;
+position: absolute;
+
+
 }
 
 #DateAndTime {
@@ -296,3 +328,6 @@ figure img{
 .Orange {
     background-color: orange;
 }
+
+
+

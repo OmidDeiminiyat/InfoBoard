@@ -13,7 +13,7 @@ fetch(url)
     return response.json();
   })
   .then(data => {
-  //  console.log(data);
+   // console.log(data);
 
 
 
@@ -29,6 +29,7 @@ fetch(url)
 
     dataArray.slice(0, 8).forEach(item => {
 
+    
 
      
    var myTest = document.createElement("div");
@@ -157,7 +158,7 @@ fetch(ThirdUrl)
   })
   .then(data => {
 
-    console.log(data.MultiDepartureBoard);
+    //console.log(data.MultiDepartureBoard);
 
     const container = document.getElementById("departureBoard");
 
@@ -186,13 +187,13 @@ fetch(ThirdUrl)
         ParafOne.classList.add("Red");
         ParafOne.textContent = JSON.stringify(entry.line);
         NewTest.appendChild(ParafOne);
-        console.log(entry.line);
+       // console.log(entry.line);
        } else if (entry.line == "17") {
         const ParafOne = document.createElement("p");
         ParafOne.classList.add("Yellow");
         ParafOne.textContent = JSON.stringify(entry.line);
         NewTest.appendChild(ParafOne);
-        console.log(entry.line);
+      //  console.log(entry.line);
        }
     
    
@@ -257,7 +258,7 @@ const NewWeekDay = getWeekDay[MyDay];
 
  // console.log(DayByDay);
 
-const weekly = document.getElementById("DateAndTime");
+const weekly = document.getElementById("getDataWeather");
 
 
 const ApearData = `<h1>${NewWeekDay}<br>${myMonth}.${DayByDay}</h1>`;
@@ -272,3 +273,60 @@ weekly.innerHTML = ApearData;
 
 OurTime()
 setInterval(OurTime, 1000);
+
+
+
+//Fetch data from weather
+
+const WeatherUrl = "https://api.openweathermap.org/data/2.5/weather?q=Aalborg&appid=4d58d6f0a435bf7c5a52e2030f17682d&units=metric";
+
+fetch(WeatherUrl)
+.then(response => {
+    if (!response.ok) {
+    throw new Error("Problem with fetcha weather Data");
+} 
+return response.json();
+
+})
+.then(weatherData => {
+
+
+// console.log(weatherData);
+
+const MyWeather  = document.getElementById("Temprator");
+
+
+var newTest = Math.round(weatherData.main.temp);
+// console.log(newTest);
+
+
+var showAll = `${newTest}&#8451;<img src="https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png" >`;
+
+MyWeather.innerHTML = showAll;
+
+})
+
+
+
+// Fetch data from TV2
+
+// const tv2Url = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.dr.dk%2Fnyheder%2Fservice%2Ffeeds%2Fallenyheder%23";
+
+// fetch(tv2Url) 
+
+// .then(response => {
+
+//  if (!response.ok) {
+//     throw new Error("fail to fetch Data from TV2");
+//  }
+//  return response.json()
+
+// })
+
+
+// .then(TvData => {
+
+//     console.log(TvData.items[1].title);
+
+
+// })
