@@ -187,7 +187,7 @@ color: var(--paragraf);
 
 /* Start third section */
 .main section:nth-child(3) {
-    background-image: url("../image/pexels-andras-stefuca-18004083.jpg");
+    background-image: url("../image/NewBus.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -241,7 +241,17 @@ color: var(--paragraf);
 }
 .main section:nth-child(3) div fieldset .ThirdStyle p:nth-child(1) {
     border-radius: 20px;
+    padding: 17px 23px 0 23px;
 }
+.main section:nth-child(3) div fieldset .ThirdStyle p:nth-child(2) {
+   color: var(--texts);
+   text-transform: uppercase;
+}
+.main section:nth-child(3) div fieldset .ThirdStyle p:nth-child(3) {
+    color: var(--texts);
+    text-transform: uppercase;
+    font-weight: bold;
+ }
 .main section:nth-child(3) div fieldset .ThirdStyle p {
     font-size: 10px;
 }
@@ -255,6 +265,10 @@ color: var(--paragraf);
     color: var(--main-color);
 }
 
+#DateAndTime {
+    position: relative;
+    margin-top: 100px;
+}
 
 .main section:nth-child(3) .NewDato {
     position: absolute;
