@@ -26,13 +26,14 @@
     background-color:  var(--First-back);
     margin: 1rem;
     border-radius: 15px;
-    padding: 0 5% 0 5%;
+    /* padding: 0 5% 0 5%; */
+    width: 360px;
 }
 .main section:nth-child(1) h1{
     color: var(--texts);
     text-transform: uppercase;
     font-weight: 300;
-    font-size: 33px;
+    font-size: 36px;
     text-align: center;
 
     /*  font-family: Underground */
@@ -41,13 +42,15 @@
     color: var(--texts);
     text-transform: uppercase;
     font-weight: 100;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
+    margin-top: -30px;
 
 }
 .main section:nth-child(1) div {
     display: flex;
     flex-direction: column;
+    width: 355px;
    
 }
 .main section:nth-child(1) fieldset {
@@ -67,7 +70,7 @@
 }
 
 .main section:nth-child(1) fieldset p {
-    margin: 18px 30px 0 0;
+    margin: 16px 24px 0 0;
     text-transform: uppercase;
     font-size: 10px;
 
