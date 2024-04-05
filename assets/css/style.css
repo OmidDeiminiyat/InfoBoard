@@ -195,9 +195,10 @@ font-size: 14px;
 
 /* Start third section */
 .main section:nth-child(3) {
-    background-image: url("../image/NewBus.jpg");
+    background-image: url("../image/pexels-andras-stefuca-18004083.jpg");
     background-size: cover;
     background-position: center;
+
 }
 
 
@@ -207,15 +208,21 @@ font-size: 14px;
 
 .main section:nth-child(3) h1 span:nth-child(1) {
     color: var(--texts);
-    font-weight: 600;
-    font-size: 42px;
-    
+    font-weight: 700;
+    font-size: 55px; 
 } 
 .main section:nth-child(3) h1 span:nth-child(2) {
     color: var(--texts);
     font-weight: 100;
-    font-size: 42px;
+    font-size: 55px;
 } 
+#BusData .material-symbols-outlined{
+    color: white;
+    font-size: 3.5rem; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
 .main section:nth-child(3) div {
     width: 82%;
     position: relative;
