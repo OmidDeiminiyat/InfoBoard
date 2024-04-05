@@ -25,9 +25,9 @@
 .main section:nth-child(1) {
     background-color:  var(--First-back);
     margin: 1rem;
-    border-radius: 15px;
-    /* padding: 0 5% 0 5%; */
-    width: 360px;
+    border-radius: 20px;
+    padding: 0 2% 0 3%; 
+    width: 370px;
 }
 .main section:nth-child(1) h1{
     color: var(--texts);
@@ -50,7 +50,7 @@
 .main section:nth-child(1) div {
     display: flex;
     flex-direction: column;
-    width: 355px;
+    width: 360px;
    
 }
 .main section:nth-child(1) fieldset {
@@ -81,6 +81,7 @@
     padding: 1rem;
     margin: 0 20px 0 0;
     border-radius: 20px;
+    font-weight: bold;
 }
 .main section:nth-child(1) fieldset p:nth-child(4) {
    
@@ -125,26 +126,33 @@ padding: 3px;
 .main section:nth-child(1) .WifiInfo {
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: 1rem;
-margin: 0 0 1rem 0;
+gap: 2px;
+margin: 2px 2px ;
+margin-top: 3rem;
 }
 
 .WifiInfo article {
     background-color: var(--texts);
     border-radius: 20px;
-    
-    width: 100%;
+    width: 93%;
+    padding: 5px;
+    text-align: center;
+
+}
+.WifiInfo article p {
+   font-size: 12px;
+   text-align: left;
 }
 
 /* second section start */
 
 .main section:nth-child(2) #Time {
-    background-color: var(--texts);
+     background-color: var(--texts);
     color: var(--texts);
-    width: 35.5%;
+    width: 34.8%;
     border-radius: 20px;
     margin: 0;
-    border: 2px solid #434040;
+    /* border: 2px solid #434040; */
     margin-left: 30%;
     margin-top: 1rem;
     box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
@@ -163,7 +171,15 @@ margin: 0 0 1rem 0;
     margin: 0;
     font-size: 35px;
 }
-
+.WifiInfo article h4{
+    text-transform: uppercase;
+    
+}
+.WifiInfo article  p span{
+    text-decoration: underline;
+    font-weight: bold;
+    
+}
 /* Seconnd part */
 
 .main section:nth-child(2) div:nth-child(2) {
@@ -216,9 +232,10 @@ font-size: 14px;
 } 
 .main section:nth-child(3) h1 span:nth-child(2) {
     color: var(--texts);
-    font-weight: 100;
+    font-weight: 300;
     font-size: 55px;
     font-family: "Roboto", sans-serif;
+   
 } 
 #BusData .material-symbols-outlined{
     color: white;
@@ -346,9 +363,10 @@ position: absolute;
 
 figure img{
     display: block;
-    width: 100%;
+    width: 120%;
     border-radius: 20px;
-}
+    height: 120%;
+    }
 
 .Yellow {
     background-color: yellow;
