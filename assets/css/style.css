@@ -195,7 +195,7 @@ font-size: 14px;
 
 /* Start third section */
 .main section:nth-child(3) {
-    background-image: url("../image/pexels-andras-stefuca-18004083.jpg");
+    background-image: url("../image/pexels-andrea-piacquadio-3764021.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -283,7 +283,8 @@ font-size: 14px;
 .main section:nth-child(3) hgroup  {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    color: var(--main-color);
+    /* color: var(--main-color); */
+    color: black;
     margin: 0;
     padding: 0;
 
