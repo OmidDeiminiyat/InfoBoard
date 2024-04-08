@@ -308,24 +308,58 @@ MyWeather.innerHTML = showAll;
 
 
 // Fetch data from TV2
+/*
+const tv2Url = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.dr.dk%2Fnyheder%2Fservice%2Ffeeds%2Fallenyheder%23";
 
-// const tv2Url = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.dr.dk%2Fnyheder%2Fservice%2Ffeeds%2Fallenyheder%23";
+ fetch(tv2Url) 
 
-// fetch(tv2Url) 
+ .then(response => {
 
-// .then(response => {
+  if (!response.ok) {
+    throw new Error("fail to fetch Data from TV2");
+  }
+  return response.json()
 
-//  if (!response.ok) {
-//     throw new Error("fail to fetch Data from TV2");
-//  }
-//  return response.json()
-
-// })
-
-
-// .then(TvData => {
-
-//     console.log(TvData.items[1].title);
+ })
 
 
-// })
+ .then(TvData => {
+
+     console.log(TvData.items[1].title);
+
+
+ })
+ */
+
+
+ fetch('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.dr.dk%2Fnyheder%2Fservice%2Ffeeds%2Fallenyheder%23')
+  .then(response => {
+    // Check if the response is successful (status code 200)
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    // Parse the response as JSON
+    return response.json();
+  })
+  .then(data => {
+    // Get the newsTicker section
+    const newsTicker = document.getElementById("newsTicker");
+
+    // Check if items exist in the data
+    if (!data.items) {
+      throw new Error('Items not found in the data');
+    }
+
+    // Display the items
+    data.items.forEach(item => {
+      // Create a new div for each news item
+      const newsItem = document.createElement("div");
+      newsItem.classList.add("newsItem");
+      newsItem.textContent = item.title;
+      newsTicker.appendChild(newsItem);
+    });
+  })
+  .catch(error => {
+    // Handle any errors that occurred during the fetch operation
+    console.error('Fetch failed:', error);
+  });

@@ -25,9 +25,15 @@
 .main section:nth-child(1) {
     background-color:  var(--First-back);
     margin: 1rem;
+<<<<<<< Updated upstream
     border-radius: 20px;
     padding: 0 2% 0 3%; 
     width: 370px;
+=======
+    border-radius: 15px;
+   padding: 0 5% 0 5%;  
+    width: 360px;
+>>>>>>> Stashed changes
 }
 .main section:nth-child(1) h1{
     color: var(--texts);
@@ -209,6 +215,10 @@ font-size: 14px;
     border-radius: 20px;
     color: var(--texts);
 }
+.main section:nth-child(2) div:nth-child(3) figure img{
+    width: 120%;
+    height: 120%;
+}
 
 
 
@@ -379,4 +389,38 @@ figure img{
 }
 
 
+
+
+
+
+
+
+
+
+
+/* styles.css */
+#newsTicker {
+    width: 100%;
+    height: 50px; /* Adjust height as needed */
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #f0f0f0; /* Background color */
+    padding: 10px;
+  }
+  
+  .newsItem {
+    display: inline-block;
+    margin-right: 20px; /* Adjust spacing between news items */
+    animation: tickerAnimation 10s linear infinite; /* Adjust animation duration */
+  }
+  
+  @keyframes tickerAnimation {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
 
