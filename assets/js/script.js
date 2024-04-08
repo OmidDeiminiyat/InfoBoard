@@ -223,13 +223,12 @@ function OurTime() {
 
     const currentDate = new Date();
 
-
-    const myMonth = currentDate.getDate();
+    var myMonth = currentDate.getMonth() + 1;
     const MyHour = currentDate.getHours();
     const MyMinute = currentDate.getMinutes();
     const MyDay = currentDate.getDay();
 
-   // console.log(myMonth);
+    console.log(currentDate.getDate());
 
 const showTime = `${MyHour}`;
 const ShowMinute = `${MyMinute}`;
