@@ -12,29 +12,27 @@
     --lightBlack: rgba(0, 0, 0, 0.332);
 }
 
-
 .main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     background-color: var(--main-color);
     font-family: "Roboto", sans-serif;
-    font-style: normal;
-    
-   
+    font-style: normal; 
+    margin: 0;
+    border: 1px solid black;
 }
 .main section:nth-child(1) {
     background-color:  var(--First-back);
-    margin: 1rem;
-<<<<<<< Updated upstream
     border-radius: 20px;
-    padding: 0 2% 0 3%; 
-    width: 370px;
-=======
     border-radius: 15px;
-   padding: 0 5% 0 5%;  
-    width: 360px;
->>>>>>> Stashed changes
+    width: 90%;
+    margin: 5% 5% 5% 5%;
+    height: 90%;
+
 }
 .main section:nth-child(1) h1{
     color: var(--texts);
@@ -57,7 +55,8 @@
 .main section:nth-child(1) div {
     display: flex;
     flex-direction: column;
-    width: 360px;
+    width: 90%;
+    margin-left: 5%;
    
 }
 .main section:nth-child(1) fieldset {
@@ -98,7 +97,7 @@
 .main section:nth-child(1) .listGroup ul{
     display: flex;
     flex-direction: row;
-    margin-left: 80px;
+   justify-content: center;
 }
 .main section:nth-child(1) .listGroup ul li {
 justify-content: center;
@@ -127,22 +126,21 @@ padding: 3px;
 }
 
 
-
-
-
 .main section:nth-child(1) .WifiInfo {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 2px;
-margin: 2px 2px ;
+display: flex;
+flex-direction: row;
+width: 90%;
+justify-content: center;
+margin: 0 5% 0 5%; 
 margin-top: 3rem;
 }
 
 .WifiInfo article {
     background-color: var(--texts);
     border-radius: 20px;
-    width: 93%;
-    padding: 5px;
+    width: 80%;
+padding: 5%;
+margin: 1%;
     text-align: center;
 
 }
@@ -151,16 +149,28 @@ margin-top: 3rem;
    text-align: left;
 }
 
+
+
 /* second section start */
 
+.main section:nth-child(2) {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+
 .main section:nth-child(2) #Time {
+    position: relative;
+    left: 38.5%;
+    display: flex;
+    justify-content: center;
      background-color: var(--texts);
     color: var(--texts);
-    width: 34.8%;
     border-radius: 20px;
     margin: 0;
-    /* border: 2px solid #434040; */
-    margin-left: 30%;
+    width: 23%;
     margin-top: 1rem;
     box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.5);
 }
@@ -187,13 +197,12 @@ margin-top: 3rem;
     font-weight: bold;
     
 }
-/* Seconnd part */
 
 .main section:nth-child(2) div:nth-child(2) {
     background-color: var(--First-back);
     border-radius: 20px;
     color: var(--texts);
-    padding: 20px 20px 20px 20px;
+    padding: 6% 2% 6% 2%;
     margin-top: 1rem;
 }
 .main section:nth-child(2) div:nth-child(2) h3 {
@@ -204,7 +213,7 @@ color: var(--paragraf);
 font-size: 14px;
 }
 
-/* Third part */
+
 .main section:nth-child(2) div:nth-child(3) {
     display: flex;
     flex-direction: row;
@@ -212,22 +221,35 @@ font-size: 14px;
     text-align: center;
 }
 .main section:nth-child(2) div:nth-child(3) figure {
+    display: block;
     background-color: var(--First-back);
     border-radius: 20px;
     color: var(--texts);
+    padding: 10% 0 10% 0;
+    margin: 9% 1% 0 0;
+
 }
-.main section:nth-child(2) div:nth-child(3) figure img{
-    width: 120%;
-    height: 120%;
+.main section:nth-child(2) div:nth-child(3) figure:nth-child(1) {
+    width: 140%;
+}
+.main section:nth-child(2) div:nth-child(3) figure:nth-child(2) {
+    width: 210%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../image/pexels-dana-tentis-1213710.jpg");
+    background-position: center;
 }
 
 
 
 /* Start third section */
 .main section:nth-child(3) {
-    background-image: url("../image/pexels-andrea-piacquadio-3764021.jpg");
+    background-image: url("../image/Vi ar coffe snart.jpg");
     background-size: cover;
     background-position: center;
+    width: 95%;
+    margin-left: 5%;
+    position: relative;
 }
 
 .main section:nth-child(3) h1 {
@@ -238,13 +260,13 @@ font-size: 14px;
 .main section:nth-child(3) h1 span:nth-child(1) {
     color: var(--texts);
     font-weight: 700;
-    font-size: 55px; 
+    font-size: 75px; 
     font-family: "Roboto", sans-serif;
 } 
 .main section:nth-child(3) h1 span:nth-child(2) {
     color: var(--texts);
     font-weight: 300;
-    font-size: 55px;
+    font-size: 75px;
     font-family: "Roboto", sans-serif;
    
 } 
@@ -256,16 +278,18 @@ font-size: 14px;
     align-items: center;
 }
 .main section:nth-child(3) div {
-    width: 89%;
+   
+
+    width: 90%;
     position: relative;
-    left: 7%;
+    left: 5%;
     margin-top: 20%;
     padding: 0;
     text-align: center;
     font-family: "Roboto", sans-serif;
 
 }
-.main section:nth-child(3) div :nth-child(1) {
+.main section:nth-child(3) div:nth-child(1) {
     font-weight: 800;
     font-size: 25px;
     
@@ -278,11 +302,12 @@ font-size: 14px;
     margin-top: 6px;
     border: none;
     padding: 0;
+    width: 70%;
+    margin-left: 15%;
 }
 .main section:nth-child(3) div fieldset p {
     padding: 12px;
     margin: 0;
-
 }
 
 .main section:nth-child(3) div fieldset .ThirdStyle {
@@ -314,24 +339,23 @@ font-size: 14px;
 .main section:nth-child(3) hgroup  {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* color: var(--main-color); */
-    color: black;
+    color: var(--main-color); 
     margin: 0;
     padding: 0;
-
+    top: 5%;
 }
 .main section:nth-child(3) hgroup div:nth-child(1){
     font-weight: 400;
     font-size: 58px;
     position: relative;
-    top: 60px;
     /* color: red; */
 }
 .main section:nth-child(3) hgroup div:nth-child(2){
     font-weight: 400;
-    font-size: 66px;
+    font-size: 96px;
     position: relative;
-    top: 220px;
+    height: 10%;
+    top: 10%;
     /* color: red; */
 }
 
@@ -360,12 +384,11 @@ position: absolute;
 
 #DateAndTime {
     position: relative;
-    margin-top: 100px;
+   
 }
 
 .main section:nth-child(3) .NewDato {
     position: absolute;
-    top: 70%;
     font-weight: 100;
     font-size: 60px;
     color: red;
