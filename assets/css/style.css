@@ -407,14 +407,13 @@ figure img{
     height: 50px; /* Adjust height as needed */
     overflow: hidden;
     white-space: nowrap;
-    background-color: #f0f0f0; /* Background color */
-    padding: 10px;
+    background-color: #f17d09; /* Background color */
   }
   
   .newsItem {
     display: inline-block;
-    margin-right: 20px; /* Adjust spacing between news items */
-    animation: tickerAnimation 10s linear infinite; /* Adjust animation duration */
+    margin: 0 90px; /* Adjust spacing between news items */
+    animation: tickerAnimation 20s linear infinite; /* Adjust animation duration */
   }
   
   @keyframes tickerAnimation {
@@ -422,7 +421,7 @@ figure img{
       transform: translateX(100%);
     }
     100% {
-      transform: translateX(-100%);
+        transform: translateX(-100% );
     }
   }
   
