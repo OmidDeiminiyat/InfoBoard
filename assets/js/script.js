@@ -59,12 +59,16 @@ fetch(url)
    myTest.appendChild(SecondParaf);
 
    const ForthParaf = document.createElement("p");
-   ForthParaf.textContent = JSON.stringify(item.StartDate);
+   const startTime = new Date(item.StartDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+   ForthParaf.textContent = JSON.stringify(startTime);
    myTest.appendChild(ForthParaf);
 
    container.appendChild(myTest);
 
-        
+    //    console.log(item);
+        console.log(startTime);
+
+     
        });
 
  
@@ -100,7 +104,7 @@ var today = daysOfWeek[dayOfWeek];
 // fetch second data from kontine
 
 
-var Day = "Onsdag";
+var Day = "mandag";
 
   const SecondUrl = "https://infoskaerm.techcollege.dk/umbraco/api/content/getcanteenmenu/?type=json";
 
@@ -116,22 +120,46 @@ var Day = "Onsdag";
   .then(SecondData => {
     if (today == "mandag") {
         const test = 0;
+        console.log(SecondData);
+        //  console.log(SecondData.Days[test]);
+          const neewDish = SecondData.Days[test];
+      //    console.log(neewDish.Dish);
+          const OurFood = document.getElementById("Foods");
+         OurFood.innerText= neewDish.Dish;
     } else if (today == "tirsdag") {
         const test = 1;
+        console.log(SecondData);
+        //  console.log(SecondData.Days[test]);
+          const neewDish = SecondData.Days[test];
+      //    console.log(neewDish.Dish);
+          const OurFood = document.getElementById("Foods");
+         OurFood.innerText= neewDish.Dish;
     } else if (today == "onsdag") {
         const test = 2;
-     //   console.log(SecondData.Days[test]);
+
+        console.log(SecondData);
+      //  console.log(SecondData.Days[test]);
         const neewDish = SecondData.Days[test];
     //    console.log(neewDish.Dish);
         const OurFood = document.getElementById("Foods");
        OurFood.innerText= neewDish.Dish;
 
-
-
     } else if (today == "torsdag") {
         const test = 3;
+        console.log(SecondData);
+        //  console.log(SecondData.Days[test]);
+          const neewDish = SecondData.Days[test];
+      //    console.log(neewDish.Dish);
+          const OurFood = document.getElementById("Foods");
+         OurFood.innerText= neewDish.Dish;
     } else if (today == "fredag") {
         const test = 4;
+        console.log(SecondData);
+        //  console.log(SecondData.Days[test]);
+          const neewDish = SecondData.Days[test];
+      //    console.log(neewDish.Dish);
+          const OurFood = document.getElementById("Foods");
+         OurFood.innerText= neewDish.Dish;
     } 
 
     if (typeof SecondData !== 'object' || SecondData === null) {
@@ -206,7 +234,7 @@ fetch(ThirdUrl)
       ParafThree.textContent = JSON.stringify(entry.time);
       NewTest.appendChild(ParafThree);
    
-   
+
       BusContainer.appendChild(NewTest);
 
     });
@@ -223,12 +251,13 @@ function OurTime() {
 
     const currentDate = new Date();
 
-    var myMonth = currentDate.getMonth() + 1;
+    var myMonth = currentDate.getMonth();
     const MyHour = currentDate.getHours();
     const MyMinute = currentDate.getMinutes();
     const MyDay = currentDate.getDay();
+    const MyDate = currentDate.getDate();
 
-    console.log(currentDate.getDate());
+  //  console.log(MyDate);
 
 const showTime = `${MyHour}`;
 const ShowMinute = `${MyMinute}`;
@@ -260,7 +289,7 @@ const NewWeekDay = getWeekDay[MyDay];
 const weekly = document.getElementById("getDataWeather");
 
 
-const ApearData = `<h1>${NewWeekDay}<br>${myMonth}.${DayByDay}</h1>`;
+const ApearData = `<h1>${NewWeekDay}<br>${MyDate}.${DayByDay}</h1>`;
 const ApearWeek = `${myMonth}`;
 
 
