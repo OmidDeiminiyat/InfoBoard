@@ -20,6 +20,7 @@
     background-color: var(--main-color);
     font-family: "Roboto", sans-serif;
     font-style: normal;
+    
    
 }
 .main section:nth-child(1) {
@@ -321,15 +322,17 @@ font-size: 14px;
 }
 .main section:nth-child(3) hgroup div:nth-child(1){
     font-weight: 400;
-    font-size: 90px;
+    font-size: 58px;
     position: relative;
     top: 60px;
+    /* color: red; */
 }
 .main section:nth-child(3) hgroup div:nth-child(2){
     font-weight: 400;
-    font-size: 90px;
+    font-size: 66px;
     position: relative;
-    top: 170px;
+    top: 220px;
+    /* color: red; */
 }
 
 
@@ -373,9 +376,9 @@ position: absolute;
 
 figure img{
     display: block;
-    width: 120%;
+    width: 100%;
     border-radius: 20px;
-    height: 120%;
+    height: 100%;
     }
 
 .Yellow {
