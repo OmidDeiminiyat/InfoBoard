@@ -369,7 +369,7 @@ function getCurrentTime() {
 
   // Display the formatted time
   const NewTime = document.getElementById("Hour");
-  NewTime.innerText = "11";
+  NewTime.innerText = hours;
 
   const NewMinute = document.getElementById("Minute");
   NewMinute.innerText = minutes;
