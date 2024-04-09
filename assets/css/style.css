@@ -29,6 +29,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow: hidden;
 }
 .main section:nth-child(1) {
     background-color:  var(--First-back);

@@ -25,11 +25,13 @@ fetch(url)
     const container = document.getElementById("LessonInfo");
 
     const dataArray = Object.values(data.value);
+
     const filteredData = dataArray.filter(item => item.Room === "P024");
+    
 
-    filteredData.slice(0, 2).forEach(item => {
+   filteredData.slice(0, 3).forEach(item => {
 
-      console.log(item);
+     // console.log(item);
      
    var myTest = document.createElement("div");
    myTest.classList.add("NewStyle");
@@ -47,22 +49,22 @@ fetch(url)
     ThirdParaf.classList.add("Orange");
   }
 
-  ThirdParaf.textContent = JSON.stringify(item.Room);
+  ThirdParaf.textContent = item.Room;
   myTest.appendChild(ThirdParaf);
 
 
 
    const paraf = document.createElement("p");
-   paraf.textContent = JSON.stringify(item.Team);
+   paraf.textContent = item.Team;
    myTest.appendChild(paraf);
 
    const SecondParaf = document.createElement("p");
-   SecondParaf.textContent = JSON.stringify(item.Subject);
+   SecondParaf.textContent = item.Subject;
    myTest.appendChild(SecondParaf);
 
    const ForthParaf = document.createElement("p");
    const startTime = new Date(item.StartDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-   ForthParaf.textContent = JSON.stringify(startTime);
+   ForthParaf.textContent = startTime;
    myTest.appendChild(ForthParaf);
 
    container.appendChild(myTest);
@@ -113,9 +115,9 @@ fetch(GetUrl)
     const filteredData = dataArray.filter(item => item.Room === "P025");
     
 
-   filteredData.slice(0, 2).forEach(item => {
+   filteredData.slice(0, 3).forEach(item => {
 
-      console.log(item);
+     // console.log(item);
      
    var myTest = document.createElement("div");
    myTest.classList.add("NewStyle");
@@ -133,26 +135,25 @@ fetch(GetUrl)
     ThirdParaf.classList.add("Orange");
   }
 
-  ThirdParaf.textContent = JSON.stringify(item.Room);
+  ThirdParaf.textContent = item.Room;
   myTest.appendChild(ThirdParaf);
 
 
 
    const paraf = document.createElement("p");
-   paraf.textContent = JSON.stringify(item.Team);
+   paraf.textContent = item.Team;
    myTest.appendChild(paraf);
 
    const SecondParaf = document.createElement("p");
-   SecondParaf.textContent = JSON.stringify(item.Subject);
+   SecondParaf.textContent = item.Subject;
    myTest.appendChild(SecondParaf);
 
    const ForthParaf = document.createElement("p");
    const startTime = new Date(item.StartDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-   ForthParaf.textContent = JSON.stringify(startTime);
+   ForthParaf.textContent = startTime;
    myTest.appendChild(ForthParaf);
 
    container.appendChild(myTest);
-
 
  
     //    console.log(item);
@@ -196,7 +197,7 @@ fetch(FetchThirdUrl)
     const dataArray = Object.values(data.value);
     const filteredData = dataArray.filter(item => item.Room === "N112b");
 
-    filteredData.slice(0, 2).forEach(item => {
+    filteredData.slice(0, 3).forEach(item => {
 
       console.log(item);
      
@@ -216,22 +217,22 @@ fetch(FetchThirdUrl)
     ThirdParaf.classList.add("Orange");
   }
 
-  ThirdParaf.textContent = JSON.stringify(item.Room);
+  ThirdParaf.textContent = item.Room;
   myTest.appendChild(ThirdParaf);
 
 
 
    const paraf = document.createElement("p");
-   paraf.textContent = JSON.stringify(item.Team);
+   paraf.textContent = item.Team;
    myTest.appendChild(paraf);
 
    const SecondParaf = document.createElement("p");
-   SecondParaf.textContent = JSON.stringify(item.Subject);
+   SecondParaf.textContent = item.Subject;
    myTest.appendChild(SecondParaf);
 
    const ForthParaf = document.createElement("p");
    const startTime = new Date(item.StartDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-   ForthParaf.textContent = JSON.stringify(startTime);
+   ForthParaf.textContent = startTime;
    myTest.appendChild(ForthParaf);
 
    container.appendChild(myTest);
@@ -281,7 +282,7 @@ fetch(FetchForthUrl)
     const dataArray = Object.values(data.value);
     const filteredData = dataArray.filter(item => item.Room === "P027-4");
 
-    filteredData.slice(0, 2).forEach(item => {
+    filteredData.slice(0, 3).forEach(item => {
 
       console.log(item);
      
@@ -301,22 +302,22 @@ fetch(FetchForthUrl)
     ThirdParaf.classList.add("Orange");
   }
 
-  ThirdParaf.textContent = JSON.stringify(item.Room);
+  ThirdParaf.textContent = item.Room;
   myTest.appendChild(ThirdParaf);
 
 
 
    const paraf = document.createElement("p");
-   paraf.textContent = JSON.stringify(item.Team);
+   paraf.textContent = item.Team;
    myTest.appendChild(paraf);
 
    const SecondParaf = document.createElement("p");
-   SecondParaf.textContent = JSON.stringify(item.Subject);
+   SecondParaf.textContent = item.Subject;
    myTest.appendChild(SecondParaf);
 
    const ForthParaf = document.createElement("p");
    const startTime = new Date(item.StartDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-   ForthParaf.textContent = JSON.stringify(startTime);
+   ForthParaf.textContent = startTime;
    myTest.appendChild(ForthParaf);
 
    container.appendChild(myTest);
@@ -498,13 +499,13 @@ fetch(ThirdUrl)
        if (entry.line == "18") {
         const ParafOne = document.createElement("p");
         ParafOne.classList.add("Red");
-        ParafOne.textContent = JSON.stringify(entry.line);
+        ParafOne.textContent = entry.line;
         NewTest.appendChild(ParafOne);
        // console.log(entry.line);
        } else if (entry.line == "17") {
         const ParafOne = document.createElement("p");
         ParafOne.classList.add("Yellow");
-        ParafOne.textContent = JSON.stringify(entry.line);
+        ParafOne.textContent = entry.line;
         NewTest.appendChild(ParafOne);
       //  console.log(entry.line);
        }
@@ -512,11 +513,11 @@ fetch(ThirdUrl)
    
    
       const parafTwo = document.createElement("p");
-      parafTwo.textContent = JSON.stringify(entry.stop);
+      parafTwo.textContent = entry.stop;
       NewTest.appendChild(parafTwo);
    
       const ParafThree = document.createElement("p");
-      ParafThree.textContent = JSON.stringify(entry.time);
+      ParafThree.textContent = entry.time;
       NewTest.appendChild(ParafThree);
    
 
