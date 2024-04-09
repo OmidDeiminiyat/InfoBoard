@@ -4,18 +4,22 @@
     --main-color: #F5D45B;
     --First-back: #564A1F;
     --texts: white;
-    --Red: red;
-    --blue: blue;
+    --Red: rgb(238, 90, 90);
+    --blue: rgb(22, 110, 198);
     --orange: orange;
     --dark: black;
     --paragraf: rgb(215, 211, 211);
     --lightBlack: rgba(0, 0, 0, 0.332);
 }
 
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-color);
+}
 .main {
     position: absolute;
     width: 100%;
-    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
@@ -23,7 +27,8 @@
     font-family: "Roboto", sans-serif;
     font-style: normal; 
     margin: 0;
-    border: 1px solid black;
+    padding: 0;
+    height: 100%;
 }
 .main section:nth-child(1) {
     background-color:  var(--First-back);
@@ -31,7 +36,7 @@
     border-radius: 15px;
     width: 90%;
     margin: 5% 5% 5% 5%;
-    height: 92%;
+    height: 90%;
 
 }
 .main section:nth-child(1) h1{
@@ -147,39 +152,37 @@ margin: 1%;
 }
 
 #news {
-background-color: var(--texts);
+color: var(--paragraf);
   margin-top: 1%;
 display: none;
 max-height: 10%;
 overflow: auto;
-max-width: 25%;
+max-width: 100%;
 margin-left: 2%;
-position: fixed;
-    margin-bottom: 4%;
-    bottom: 0;
+position: relative;
+margin-top: 1%;
     border-radius: 20px;
-
 }
  #getNews{
-    animation: news 30s ease-in-out infinite;
+    animation: news 40s ease-in-out infinite;
     position: relative;
-   top: 110px;
-   
+   top: 60px;
+}
+#getNews p{
+    font-size: 0.9vw;
 }
  @keyframes news {
-    0% {top: 110px; }
+    0% {top: 400px; }
     100% { top: -400px;}
 } 
 
 
-@media (min-width:2100px) { 
+@media (min-width:1100px) { 
 
     #news {
 display: block;
 
     }
-
-
 
 }
 
@@ -202,7 +205,7 @@ display: block;
     color: var(--texts);
     border-radius: 20px;
     margin: 0;
-    max-width: 8.5vw;
+    max-width: 8.2vw;
     margin-top: 1rem;
    background-color: var(--texts);
    
@@ -285,7 +288,7 @@ font-size: 0.8vw;
     width: 95%;
     margin-left: 5%;
     position: relative;
-    height: 95%;
+    height: 94%;
 }
 
 .main section:nth-child(3) h1 {
@@ -359,15 +362,18 @@ font-size: 0.8vw;
 .main section:nth-child(3) div fieldset .ThirdStyle p:nth-child(1) {
     border-radius: 20px;
     padding: 17px 23px 0 23px;
+    font-size: 1vw;
 }
 .main section:nth-child(3) div fieldset .ThirdStyle p:nth-child(2) {
    color: var(--texts);
    text-transform: uppercase;
+   font-size: 0.8vw;
 }
 .main section:nth-child(3) div fieldset .ThirdStyle p:nth-child(3) {
     color: var(--texts);
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 0.9vw;
  }
 .main section:nth-child(3) div fieldset .ThirdStyle p {
     font-size: 0.7vw;
@@ -379,7 +385,7 @@ font-size: 0.8vw;
     color: var(--main-color); 
     margin: 0;
     padding: 0;
-    top: 5%;
+   
 }
 .main section:nth-child(3) hgroup div:nth-child(1){
     font-weight: 400;
@@ -422,7 +428,6 @@ position: absolute;
 #DateAndTime {
     position: flex;
     justify-content: center;
-    top: 80%;
     font-size: 1vw;
    
 }
@@ -436,17 +441,22 @@ position: absolute;
 .main section:nth-child(3) #getDataWeather h1{
    font-size: 4vw;
    margin-left: 4vw;
+   top: -10%;
+   position: relative;
 }
 
 .main section:nth-child(3) #Temprator {
     font-size: 6vw;
     position: relative;
-    top: 40%;
+    top: 30%;
     left: -10%;
+}
+.main section:nth-child(3) #Temprator  img {
+    top: -220%;
 }
 
 .Red {
-    background-color: red;
+    background-color: var(--Red);
 }
 
 figure img{
@@ -457,10 +467,10 @@ figure img{
     }
 
 .Yellow {
-    background-color: yellow;
+    background-color: var(--main-color);
 }
 .Blue {
-    background-color: blue;
+    background-color: var(--blue)
 }
 .Orange {
     background-color: orange;
