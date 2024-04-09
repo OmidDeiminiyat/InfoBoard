@@ -10,6 +10,8 @@
     --dark: black;
     --paragraf: rgb(215, 211, 211);
     --lightBlack: rgba(0, 0, 0, 0.332);
+    --newBlack: rgba(0, 0, 0, 0.591);
+
 }
 
 body{
@@ -280,10 +282,19 @@ font-size: 0.8vw;
 }
 
 
+/* image licence: 
+Item Title:                      a woman waiting in a bus for the train at night
+Item URL:                        https://elements.envato.com/a-woman-waiting-in-a-bus-for-the-train-at-night-HC9PEJL
+Item ID:                         HC9PEJL
+Author Username:                 wirestock
+Licensee:                        Omid Deiminiyat
+Registered Project Name:         Photos
+License Date:                    April 9th, 2024
+Item License Code:               AR8QN24BMS */
 
 /* Start third section */
 .main section:nth-child(3) {
-    background-image: url("../image/Vi ar coffe snart.jpg");
+    background-image: url("../image/a-woman-waiting-in-a-bus-for-the-train-at-night-2024-03-26-21-37-43-utc.jpg");
     background-size: cover;
     background-position: center;
     width: 95%;
@@ -355,9 +366,9 @@ font-size: 0.8vw;
     flex-direction: row;
     margin: 0;
     padding: 0;
-    background-color: var(--lightBlack);
+    background-color: var(--newBlack);
     border-radius: 20px;
-   
+  
 
 }
 .main section:nth-child(3) div fieldset .ThirdStyle p:nth-child(1) {
@@ -369,12 +380,14 @@ font-size: 0.8vw;
    color: var(--texts);
    text-transform: uppercase;
    font-size: 0.8vw;
+
 }
 .main section:nth-child(3) div fieldset .ThirdStyle p:nth-child(3) {
     color: var(--texts);
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.9vw;
+ 
  }
 .main section:nth-child(3) div fieldset .ThirdStyle p {
     font-size: 0.7vw;
