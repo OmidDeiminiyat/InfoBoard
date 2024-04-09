@@ -282,10 +282,10 @@ font-size: 0.8vw;
     background-image: url("../image/Vi ar coffe snart.jpg");
     background-size: cover;
     background-position: center;
-    width: 95%;
-    margin-left: 5%;
+    width: 100%;
+    margin-left: 0.5%;
     position: relative;
-    height: 95%;
+    height: 99%;
 }
 
 .main section:nth-child(3) h1 {
@@ -296,13 +296,13 @@ font-size: 0.8vw;
 .main section:nth-child(3) h1 span:nth-child(1) {
     color: var(--texts);
     font-weight: 700;
-    font-size: 75px; 
+    font-size: 60px; 
     font-family: "Roboto", sans-serif;
 } 
 .main section:nth-child(3) h1 span:nth-child(2) {
     color: var(--texts);
     font-weight: 300;
-    font-size: 75px;
+    font-size: 60px;
     font-family: "Roboto", sans-serif;
    
 } 
@@ -383,14 +383,14 @@ font-size: 0.8vw;
 }
 .main section:nth-child(3) hgroup div:nth-child(1){
     font-weight: 400;
-    font-size: 58px;
+    font-size: 70px;
     position: relative;
-    /* color: red; */
+    /* color: red;  */
 }
 .main section:nth-child(3) hgroup div:nth-child(2){
     font-weight: 400;
     font-size: 96px;
-    position: relative;
+    position: relative; 
     height: 10%;
     top: 10%;
     /* color: red; */
