@@ -1,4 +1,5 @@
 
+// Fetch data from techCollege
 
 const url = "https://iws.itcn.dk/techcollege/schedules?departmentcode=smed";
 
@@ -13,9 +14,9 @@ fetch(url)
     return response.json();
   })
   .then(data => {
-   // console.log(data);
+    // console.log(data);
 
-
+    
 
     if (typeof data !== 'object' || data === null) {
       throw new Error('Data is not in the expected format (object)');
@@ -24,19 +25,18 @@ fetch(url)
     const container = document.getElementById("LessonInfo");
 
     const dataArray = Object.values(data.value);
+    const filteredData = dataArray.filter(item => item.Room === "P024");
 
-   
+    filteredData.slice(0, 2).forEach(item => {
 
-    dataArray.slice(0, 8).forEach(item => {
-
-    
-
+      console.log(item);
      
    var myTest = document.createElement("div");
    myTest.classList.add("NewStyle");
     
     
   const ThirdParaf = document.createElement("p");
+  
   if (item.Room == "P024") {
     ThirdParaf.classList.add("Red");
   } else if (item.Room == "P025") {
@@ -50,6 +50,8 @@ fetch(url)
   ThirdParaf.textContent = JSON.stringify(item.Room);
   myTest.appendChild(ThirdParaf);
 
+
+
    const paraf = document.createElement("p");
    paraf.textContent = JSON.stringify(item.Team);
    myTest.appendChild(paraf);
@@ -59,15 +61,273 @@ fetch(url)
    myTest.appendChild(SecondParaf);
 
    const ForthParaf = document.createElement("p");
-   ForthParaf.textContent = JSON.stringify(item.StartDate);
+   const startTime = new Date(item.StartDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+   ForthParaf.textContent = JSON.stringify(startTime);
    myTest.appendChild(ForthParaf);
 
    container.appendChild(myTest);
 
-        
-       });
 
  
+    //    console.log(item);
+
+
+       });
+    
+  })
+  .catch(error => {
+   
+    console.error('Fetch failed:', error);
+  });
+
+
+
+//No 2
+// Fetch data from techCollege
+
+const GetUrl = "https://iws.itcn.dk/techcollege/schedules?departmentcode=smed";
+
+
+fetch(GetUrl)
+  .then(response => {
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    return response.json();
+  })
+  .then(data => {
+    // console.log(data);
+    
+    
+
+    if (typeof data !== 'object' || data === null) {
+      throw new Error('Data is not in the expected format (object)');
+    }
+    
+    const container = document.getElementById("LessonInfo");
+
+    const dataArray = Object.values(data.value);
+
+    const filteredData = dataArray.filter(item => item.Room === "P025");
+    
+
+   filteredData.slice(0, 2).forEach(item => {
+
+      console.log(item);
+     
+   var myTest = document.createElement("div");
+   myTest.classList.add("NewStyle");
+    
+    
+  const ThirdParaf = document.createElement("p");
+  
+  if (item.Room == "P024") {
+    ThirdParaf.classList.add("Red");
+  } else if (item.Room == "P025") {
+    ThirdParaf.classList.add("Yellow");
+  } else if (item.Room == "N112b") {
+    ThirdParaf.classList.add("Blue");
+  } else if (item.Room == "P027-4") {
+    ThirdParaf.classList.add("Orange");
+  }
+
+  ThirdParaf.textContent = JSON.stringify(item.Room);
+  myTest.appendChild(ThirdParaf);
+
+
+
+   const paraf = document.createElement("p");
+   paraf.textContent = JSON.stringify(item.Team);
+   myTest.appendChild(paraf);
+
+   const SecondParaf = document.createElement("p");
+   SecondParaf.textContent = JSON.stringify(item.Subject);
+   myTest.appendChild(SecondParaf);
+
+   const ForthParaf = document.createElement("p");
+   const startTime = new Date(item.StartDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+   ForthParaf.textContent = JSON.stringify(startTime);
+   myTest.appendChild(ForthParaf);
+
+   container.appendChild(myTest);
+
+
+ 
+    //    console.log(item);
+
+
+       });
+    
+  })
+  .catch(error => {
+   
+    console.error('Fetch failed:', error);
+  });
+
+
+//No3
+// Fetch data from techCollege
+
+const FetchThirdUrl = "https://iws.itcn.dk/techcollege/schedules?departmentcode=smed";
+
+
+fetch(FetchThirdUrl)
+  .then(response => {
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    return response.json();
+  })
+  .then(data => {
+    // console.log(data);
+
+    
+
+    if (typeof data !== 'object' || data === null) {
+      throw new Error('Data is not in the expected format (object)');
+    }
+    
+    const container = document.getElementById("LessonInfo");
+
+    const dataArray = Object.values(data.value);
+    const filteredData = dataArray.filter(item => item.Room === "N112b");
+
+    filteredData.slice(0, 2).forEach(item => {
+
+      console.log(item);
+     
+   var myTest = document.createElement("div");
+   myTest.classList.add("NewStyle");
+    
+    
+  const ThirdParaf = document.createElement("p");
+  
+  if (item.Room == "P024") {
+    ThirdParaf.classList.add("Red");
+  } else if (item.Room == "P025") {
+    ThirdParaf.classList.add("Yellow");
+  } else if (item.Room == "N112b") {
+    ThirdParaf.classList.add("Blue");
+  } else if (item.Room == "P027-4") {
+    ThirdParaf.classList.add("Orange");
+  }
+
+  ThirdParaf.textContent = JSON.stringify(item.Room);
+  myTest.appendChild(ThirdParaf);
+
+
+
+   const paraf = document.createElement("p");
+   paraf.textContent = JSON.stringify(item.Team);
+   myTest.appendChild(paraf);
+
+   const SecondParaf = document.createElement("p");
+   SecondParaf.textContent = JSON.stringify(item.Subject);
+   myTest.appendChild(SecondParaf);
+
+   const ForthParaf = document.createElement("p");
+   const startTime = new Date(item.StartDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+   ForthParaf.textContent = JSON.stringify(startTime);
+   myTest.appendChild(ForthParaf);
+
+   container.appendChild(myTest);
+
+
+ 
+    //    console.log(item);
+
+
+       });
+    
+  })
+  .catch(error => {
+   
+    console.error('Fetch failed:', error);
+  });
+
+
+
+// No 4
+
+// Fetch data from techCollege
+
+const FetchForthUrl = "https://iws.itcn.dk/techcollege/schedules?departmentcode=smed";
+
+
+fetch(FetchForthUrl)
+  .then(response => {
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    return response.json();
+  })
+  .then(data => {
+    // console.log(data);
+
+    
+
+    if (typeof data !== 'object' || data === null) {
+      throw new Error('Data is not in the expected format (object)');
+    }
+    
+    const container = document.getElementById("LessonInfo");
+
+    const dataArray = Object.values(data.value);
+    const filteredData = dataArray.filter(item => item.Room === "P027-4");
+
+    filteredData.slice(0, 2).forEach(item => {
+
+      console.log(item);
+     
+   var myTest = document.createElement("div");
+   myTest.classList.add("NewStyle");
+    
+    
+  const ThirdParaf = document.createElement("p");
+  
+  if (item.Room == "P024") {
+    ThirdParaf.classList.add("Red");
+  } else if (item.Room == "P025") {
+    ThirdParaf.classList.add("Yellow");
+  } else if (item.Room == "N112b") {
+    ThirdParaf.classList.add("Blue");
+  } else if (item.Room == "P027-4") {
+    ThirdParaf.classList.add("Orange");
+  }
+
+  ThirdParaf.textContent = JSON.stringify(item.Room);
+  myTest.appendChild(ThirdParaf);
+
+
+
+   const paraf = document.createElement("p");
+   paraf.textContent = JSON.stringify(item.Team);
+   myTest.appendChild(paraf);
+
+   const SecondParaf = document.createElement("p");
+   SecondParaf.textContent = JSON.stringify(item.Subject);
+   myTest.appendChild(SecondParaf);
+
+   const ForthParaf = document.createElement("p");
+   const startTime = new Date(item.StartDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+   ForthParaf.textContent = JSON.stringify(startTime);
+   myTest.appendChild(ForthParaf);
+
+   container.appendChild(myTest);
+
+
+ 
+    //    console.log(item);
+
+
+       });
+    
   })
   .catch(error => {
    
@@ -77,19 +337,19 @@ fetch(url)
 
 
 
+  
+
+  //-----
 
 
-
-// Create a new Date object
 var currentDate = new Date();
 
-// Get the day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
 var dayOfWeek = currentDate.getDay();
 
-// Define an array of days of the week
+
 var daysOfWeek = ['Sunday', 'mandag', 'tirsdag', 'onsdag', 'torsdag', 'fredag', 'Saturday'];
 
-// Get the name of the day using the day of the week index
+
 var today = daysOfWeek[dayOfWeek];
 
 // Output the name of the day
@@ -97,10 +357,39 @@ var today = daysOfWeek[dayOfWeek];
 
 
 
+// Fetch Time to show on the top of the second section
+function getCurrentTime() {
+  const now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+
+  // Add leading zero if hours/minutes is less than 10
+  hours = hours < 10 ? '0' + hours : hours;
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+
+  // Display the formatted time
+  const NewTime = document.getElementById("Hour");
+  NewTime.innerText = "11";
+
+  const NewMinute = document.getElementById("Minute");
+  NewMinute.innerText = minutes;
+
+ 
+}
+
+// Call getCurrentTime function initially
+getCurrentTime();
+
+// Update time every second
+setInterval(getCurrentTime, 1000);
+
+
+
+
 // fetch second data from kontine
 
 
-var Day = "Onsdag";
+var Day = "mandag";
 
   const SecondUrl = "https://infoskaerm.techcollege.dk/umbraco/api/content/getcanteenmenu/?type=json";
 
@@ -116,22 +405,46 @@ var Day = "Onsdag";
   .then(SecondData => {
     if (today == "mandag") {
         const test = 0;
+     
+        //  console.log(SecondData.Days[test]);
+          const neewDish = SecondData.Days[test];
+      //    console.log(neewDish.Dish);
+          const OurFood = document.getElementById("Foods");
+         OurFood.innerText= neewDish.Dish;
     } else if (today == "tirsdag") {
         const test = 1;
+      
+        //  console.log(SecondData.Days[test]);
+          const neewDish = SecondData.Days[test];
+      //    console.log(neewDish.Dish);
+          const OurFood = document.getElementById("Foods");
+         OurFood.innerText= neewDish.Dish;
     } else if (today == "onsdag") {
         const test = 2;
-     //   console.log(SecondData.Days[test]);
+
+        console.log(SecondData);
+      //  console.log(SecondData.Days[test]);
         const neewDish = SecondData.Days[test];
     //    console.log(neewDish.Dish);
         const OurFood = document.getElementById("Foods");
        OurFood.innerText= neewDish.Dish;
 
-
-
     } else if (today == "torsdag") {
         const test = 3;
+        console.log(SecondData);
+        //  console.log(SecondData.Days[test]);
+          const neewDish = SecondData.Days[test];
+      //    console.log(neewDish.Dish);
+          const OurFood = document.getElementById("Foods");
+         OurFood.innerText= neewDish.Dish;
     } else if (today == "fredag") {
         const test = 4;
+        console.log(SecondData);
+        //  console.log(SecondData.Days[test]);
+          const neewDish = SecondData.Days[test];
+      //    console.log(neewDish.Dish);
+          const OurFood = document.getElementById("Foods");
+         OurFood.innerText= neewDish.Dish;
     } 
 
     if (typeof SecondData !== 'object' || SecondData === null) {
@@ -167,7 +480,7 @@ fetch(ThirdUrl)
       throw new Error('MultiDepartureBoard data not found');
     }
 
-    const firstFiveEntries = data.MultiDepartureBoard.Departure.slice(0, 5);
+    const firstFiveEntries = data.MultiDepartureBoard.Departure.slice(0, 6);
 
 
 
@@ -206,7 +519,7 @@ fetch(ThirdUrl)
       ParafThree.textContent = JSON.stringify(entry.time);
       NewTest.appendChild(ParafThree);
    
-   
+
       BusContainer.appendChild(NewTest);
 
     });
@@ -216,29 +529,27 @@ fetch(ThirdUrl)
   });
 
 
-// The Time
 
+
+
+// The Time
 
 function OurTime() {
 
     const currentDate = new Date();
 
-
-    const myMonth = currentDate.getDate();
+    var myMonth = currentDate.getMonth();
     const MyHour = currentDate.getHours();
     const MyMinute = currentDate.getMinutes();
     const MyDay = currentDate.getDay();
+    const MyDate = currentDate.getDate();
 
-   // console.log(myMonth);
+  //  console.log(MyDate);
 
-const showTime = `${MyHour}`;
-const ShowMinute = `${MyMinute}`;
 
-const NewTime = document.getElementById("Hour");
-const NewMinute = document.getElementById("Minute");
 
-NewTime.innerText = showTime;
-NewMinute.innerText = ShowMinute;
+
+
 
 
 // console.log(myMonth);
@@ -261,7 +572,7 @@ const NewWeekDay = getWeekDay[MyDay];
 const weekly = document.getElementById("getDataWeather");
 
 
-const ApearData = `<h1>${NewWeekDay}<br>${myMonth}.${DayByDay}</h1>`;
+const ApearData = `<h1>${NewWeekDay}<br>${MyDate}.${DayByDay}</h1>`;
 const ApearWeek = `${myMonth}`;
 
 
@@ -308,25 +619,48 @@ MyWeather.innerHTML = showAll;
 
 
 
-// Fetch data from TV2
+// Data From TV2
 
-// const tv2Url = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.dr.dk%2Fnyheder%2Fservice%2Ffeeds%2Fallenyheder%23";
+fetch('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.dr.dk%2Fnyheder%2Fservice%2Ffeeds%2Fallenyheder%23')
+            .then(response => response.json())
+            .then(data => {
+                // Process the data and display it
+                const feedItems = data.items;
+                const rssFeedDiv = document.getElementById('getNews');
 
-// fetch(tv2Url) 
+                // Loop through each item and create HTML elements to display them
+                feedItems.forEach(item => {
+                    const title = item.title;
+                    const link = item.link;
+                    const description = item.description;
 
-// .then(response => {
+                    // Create HTML elements for title, link, and description
+                    const titleElement = document.createElement('p');
+                    titleElement.textContent = title;
 
-//  if (!response.ok) {
-//     throw new Error("fail to fetch Data from TV2");
-//  }
-//  return response.json()
+                    const linkElement = document.createElement('a');
+                   
+                    linkElement.href = link;
+                    linkElement.target = '_blank';
 
-// })
+                    const descriptionElement = document.createElement('p');
+                    descriptionElement.textContent = description;
+
+                    // Append elements to the RSS feed container
+                    rssFeedDiv.appendChild(titleElement);
+                    rssFeedDiv.appendChild(descriptionElement);
+                    rssFeedDiv.appendChild(linkElement);
+
+                    // Add some styling for better presentation (optional)
+                    titleElement.style.marginBottom = '1px';
+                    linkElement.style.marginBottom = '1px';
+                    descriptionElement.style.marginBottom = '2px';
+                    descriptionElement.style.fontStyle = 'italic';
+                });
+            })
+            .catch(error => console.error('Error fetching RSS feed:', error));
 
 
-// .then(TvData => {
-
-//     console.log(TvData.items[1].title);
 
 
-// })
+
