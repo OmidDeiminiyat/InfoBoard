@@ -513,11 +513,11 @@ fetch(ThirdUrl)
    
    
       const parafTwo = document.createElement("p");
-      parafTwo.textContent = entry.stop;
+      parafTwo.textContent = JSON.stringify(entry.stop);
       NewTest.appendChild(parafTwo);
    
       const ParafThree = document.createElement("p");
-      ParafThree.textContent = entry.time;
+      ParafThree.textContent = JSON.stringify(entry.time);
       NewTest.appendChild(ParafThree);
    
 
