@@ -158,31 +158,35 @@ margin: 1%;
 color: var(--paragraf);
   margin-top: 1%;
 display: none;
-max-height: 20vw;
+max-height: 4vw;
 overflow: auto;
 overflow: hidden;
 max-width: 100%;
 margin-left: 2%;
 position: relative;
 margin-top: 1%;
-    border-radius: 20px;
+border-radius: 20px;
    
 }
  #getNews{
-    animation: news 40s ease-in-out infinite;
+    animation: news 30s ease-in-out infinite;
     position: relative;
    top: 60px;
+
 }
+
 #getNews p{
     font-size: 0.9vw;
+   
 }
+
 #WeekFoods {
     border: 1px solid red;
     max-height: 20%;
 }
  @keyframes news {
-    0% {top: 400px; }
-    100% { top: -400px;}
+    0% {top: 170px; }
+    100% { top: -470px;}
 } 
 
 
@@ -193,6 +197,16 @@ display: block;
 
     }
 
+}
+#GetFood hr{
+border: none;
+border-top: 1px dotted;
+height: 1px;
+}
+
+#GetFood, p {
+  text-align: center;
+  text-transform: capitalize;
 }
 
 

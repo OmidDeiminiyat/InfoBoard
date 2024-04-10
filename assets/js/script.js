@@ -199,7 +199,7 @@ fetch(FetchThirdUrl)
 
     filteredData.slice(0, 3).forEach(item => {
 
-      console.log(item);
+     // console.log(item);
      
    var myTest = document.createElement("div");
    myTest.classList.add("NewStyle");
@@ -423,7 +423,7 @@ var Day = "mandag";
     } else if (today == "onsdag") {
         const test = 2;
 
-        console.log(SecondData);
+     //   console.log(SecondData);
       //  console.log(SecondData.Days[test]);
         const neewDish = SecondData.Days[test];
     //    console.log(neewDish.Dish);
@@ -440,7 +440,7 @@ var Day = "mandag";
          OurFood.innerText= neewDish.Dish;
     } else if (today == "fredag") {
         const test = 4;
-        console.log(SecondData);
+     //   console.log(SecondData);
         //  console.log(SecondData.Days[test]);
           const neewDish = SecondData.Days[test];
       //    console.log(neewDish.Dish);
@@ -662,6 +662,33 @@ fetch('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.dr.dk%2Fny
             .catch(error => console.error('Error fetching RSS feed:', error));
 
 
+
+
+
+  
+// Display Kantine 
+            fetch('https://infoskaerm.techcollege.dk/umbraco/api/content/getcanteenmenu/?type=json')
+            .then(response => response.json())
+            .then(data => {
+         
+                const AllFoods = document.getElementById('Disp-1');
+                const AllFoodsTwo = document.getElementById('Disp-2');
+                const AllFoodsThree = document.getElementById('Disp-3');
+                const AllFoodsFour = document.getElementById('Disp-4');
+                const AllFoodsFive = document.getElementById('Disp-5');
+         const AllDays = data.Days;
+      
+         console.log(AllDays);  
+         console.log(AllDays[2].Dish);  
+
+         AllFoods.innerText = AllDays[0].DayName + ' : ' + AllDays[0].Dish;
+         AllFoodsTwo.innerText = AllDays[1].DayName + ' : ' + AllDays[1].Dish;   
+         AllFoodsThree.innerText = AllDays[2].DayName + ' : ' + AllDays[2].Dish;
+         AllFoodsFour.innerText = AllDays[3].DayName + ' : ' + AllDays[3].Dish;
+         AllFoodsFive.innerText = AllDays[4].DayName + ' : ' + AllDays[4].Dish;
+      
+       
+              })
 
 
 
