@@ -160,6 +160,7 @@ color: var(--paragraf);
 display: none;
 max-height: 20vw;
 overflow: auto;
+overflow: hidden;
 max-width: 100%;
 margin-left: 2%;
 position: relative;
@@ -305,7 +306,7 @@ Item License Code:               AR8QN24BMS */
     width: 95%;
     margin-left: 5%;
     position: relative;
-    height: 94%;
+    height: 100%;
 }
 
 .main section:nth-child(3) h1 {
@@ -410,15 +411,16 @@ Item License Code:               AR8QN24BMS */
     font-weight: 400;
     font-size: 58px;
     position: relative;
-    /* color: red; */
+    
 }
 .main section:nth-child(3) hgroup div:nth-child(2){
     font-weight: 400;
-    font-size: 96px;
+    font-size: 97px;
     position: relative;
     height: 10%;
     top: 10%;
-    /* color: red; */
+    margin-left: 10%;
+    
 }
 
 
