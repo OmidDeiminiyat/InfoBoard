@@ -458,6 +458,7 @@ var Day = "mandag";
 
 // fetch third data from Rejseplanne
 
+// From here ModelCode started
 const ThirdUrl = "https://xmlopen.rejseplanen.dk/bin/rest.exe/multiDepartureBoard?id1=851400602&id2=851973402&rttime&format=json&useBus=1";
 
 
@@ -480,18 +481,14 @@ fetch(ThirdUrl)
     if (!data.MultiDepartureBoard.Departure) {
       throw new Error('MultiDepartureBoard data not found');
     }
-
+// ModelCode Ended
+//Controller and View start
     const firstFiveEntries = data.MultiDepartureBoard.Departure.slice(0, 6);
 
-
-
-
-  //  const firstFiveEntries = data.MultiDepartureBoard.Departure.slice(0, 5);
     const BusContainer = document.getElementById("Bus");
     
     firstFiveEntries.forEach(entry => {
    
-
       var NewTest = document.createElement("div");
       NewTest.classList.add("ThirdStyle");
        
@@ -510,8 +507,6 @@ fetch(ThirdUrl)
       //  console.log(entry.line);
        }
     
-   
-   
       const parafTwo = document.createElement("p");
       parafTwo.textContent = entry.stop;
       NewTest.appendChild(parafTwo);
@@ -532,6 +527,8 @@ fetch(ThirdUrl)
 
 
 
+
+  
 
 // The Time
 

@@ -213,9 +213,9 @@ height: 1px;
 /* second section start */
 
 .main section:nth-child(2) {
-    width: 100%;
+    width: 110%;
     position: relative;
-    margin: 0;
+    margin: 0 0 0 -3%;
     padding: 0;
 }
 
@@ -230,8 +230,7 @@ height: 1px;
     margin: 0;
     max-width: 8.2vw;
     margin-top: 1rem;
-   background-color: var(--texts);
-   
+  
 }
 .main section:nth-child(2) #Time hgroup {
     display: flex;
@@ -263,9 +262,11 @@ height: 1px;
     background-color: var(--First-back);
     border-radius: 20px;
     color: var(--texts);
-    padding: 6% 2% 6% 2%;
+    padding: 6% 3% 6% 3%;
+    margin: 1rem 1rem 1rem 0;
     margin-top: 1rem;
 }
+
 .main section:nth-child(2) div:nth-child(2) h3 {
     text-align: center;
 }
