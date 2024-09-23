@@ -39,11 +39,11 @@ fetch(url)
   
   if (item.Room == "P036") {
     ThirdParaf.classList.add("Red");
-  } else if (item.Room == "P025") {
+  } else if (item.Room == "U123") {
     ThirdParaf.classList.add("Yellow");
-  } else if (item.Room == "N112b") {
+  } else if (item.Room == "N122") {
     ThirdParaf.classList.add("Blue");
-  } else if (item.Room == "P027-4") {
+  } else if (item.Room == "P017") {
     ThirdParaf.classList.add("Orange");
   }
 
@@ -110,7 +110,7 @@ fetch(GetUrl)
 
     const dataArray = Object.values(data.value);
 
-    const filteredData = dataArray.filter(item => item.Room === "P025");
+    const filteredData = dataArray.filter(item => item.Room === "P024");
     
 
    filteredData.slice(0, 2).forEach(item => {
@@ -194,7 +194,7 @@ fetch(FetchThirdUrl)
     const container = document.getElementById("LessonInfo");
 
     const dataArray = Object.values(data.value);
-    const filteredData = dataArray.filter(item => item.Room === "N112b");
+    const filteredData = dataArray.filter(item => item.Room === "P025");
 
     filteredData.slice(0, 2).forEach(item => {
 
@@ -279,7 +279,7 @@ fetch(FetchForthUrl)
     const container = document.getElementById("LessonInfo");
 
     const dataArray = Object.values(data.value);
-    const filteredData = dataArray.filter(item => item.Room === "P027-4");
+    const filteredData = dataArray.filter(item => item.Room === "N112b");
 
     filteredData.slice(0, 2).forEach(item => {
 
