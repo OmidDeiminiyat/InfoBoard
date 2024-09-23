@@ -14,7 +14,7 @@ fetch(url)
     return response.json();
   })
   .then(data => {
-    // console.log(data);
+     console.log(data);
 
     
 
@@ -37,7 +37,7 @@ fetch(url)
     
   const ThirdParaf = document.createElement("p");
   
-  if (item.Room == "P024") {
+  if (item.Room == "P036") {
     ThirdParaf.classList.add("Red");
   } else if (item.Room == "P025") {
     ThirdParaf.classList.add("Yellow");
